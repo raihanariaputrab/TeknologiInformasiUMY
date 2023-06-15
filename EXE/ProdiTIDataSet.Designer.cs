@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Teknologi_Informasi_UMY {
+namespace EXE {
     
     
     /// <summary>
@@ -1362,7 +1362,7 @@ namespace Teknologi_Informasi_UMY {
         }
     }
 }
-namespace Teknologi_Informasi_UMY.ProdiTIDataSetTableAdapters {
+namespace EXE.ProdiTIDataSetTableAdapters {
     
     
     /// <summary>
@@ -1549,7 +1549,7 @@ SELECT NIM, NamaMhs, AlamatMhs, Sex, PhoneMhs, IDUser FROM HRD.Mahasiswa WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Teknologi_Informasi_UMY.Properties.Settings.Default.ProdiTIConnectionString;
+            this._connection.ConnectionString = global::EXE.Properties.Settings.Default.ProdiTIConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2027,7 +2027,7 @@ SELECT IDNilai, NIM, KodeMK, Nilai, IDPeriode FROM Kuliah.Nilai WHERE (IDNilai =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Teknologi_Informasi_UMY.Properties.Settings.Default.ProdiTIConnectionString;
+            this._connection.ConnectionString = global::EXE.Properties.Settings.Default.ProdiTIConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

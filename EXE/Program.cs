@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Teknologi_Informasi_UMY
+namespace EXE
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Teknologi_Informasi_UMY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeknologiInformasiUMY());
+            Application.Run(new Form1());
         }
     }
 }
