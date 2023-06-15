@@ -30,5 +30,12 @@ namespace EXE
             form1.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+            this.Hide();
+        }
     }
 }

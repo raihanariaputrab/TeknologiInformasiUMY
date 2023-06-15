@@ -35,17 +35,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prodiTIDataSet = new EXE.ProdiTIDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.prodiTIDataSet = new EXE.ProdiTIDataSet();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mahasiswaTableAdapter = new EXE.ProdiTIDataSetTableAdapters.MahasiswaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,15 +97,25 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "NIM", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "NIM", true));
             this.textBox1.Location = new System.Drawing.Point(133, 44);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
             // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSet;
+            // 
+            // prodiTIDataSet
+            // 
+            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
+            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "NamaMhs", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "NamaMhs", true));
             this.textBox2.Location = new System.Drawing.Point(133, 85);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
@@ -112,7 +123,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "IDUser", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "IDUser", true));
             this.textBox3.Location = new System.Drawing.Point(133, 257);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
@@ -120,7 +131,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "AlamatMhs", true));
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "AlamatMhs", true));
             this.textBox4.Location = new System.Drawing.Point(133, 127);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -128,7 +139,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "Sex", true));
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "Sex", true));
             this.textBox5.Location = new System.Drawing.Point(133, 170);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
@@ -136,7 +147,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mahasiswaBindingSource, "PhoneMhs", true));
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "PhoneMhs", true));
             this.textBox6.Location = new System.Drawing.Point(133, 215);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
@@ -151,25 +162,26 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "IDUser";
             // 
-            // prodiTIDataSet
-            // 
-            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
-            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSet;
-            // 
             // mahasiswaTableAdapter
             // 
             this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::EXE.Properties.Resources.left_arrow;
+            this.button2.Location = new System.Drawing.Point(36, 371);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 45);
+            this.button2.TabIndex = 12;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(337, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -185,8 +197,8 @@
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +221,6 @@
         private ProdiTIDataSet prodiTIDataSet;
         private System.Windows.Forms.BindingSource mahasiswaBindingSource;
         private ProdiTIDataSetTableAdapters.MahasiswaTableAdapter mahasiswaTableAdapter;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.prodiTIDataSet = new EXE.ProdiTIDataSet();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mahasiswaTableAdapter = new EXE.ProdiTIDataSetTableAdapters.MahasiswaTableAdapter();
             this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamatMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prodiTIDataSet = new EXE.ProdiTIDataSet();
+            this.mahasiswaTableAdapter = new EXE.ProdiTIDataSetTableAdapters.MahasiswaTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,20 +62,7 @@
             this.dataGridView1.RowHeadersWidth = 47;
             this.dataGridView1.Size = new System.Drawing.Size(742, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // prodiTIDataSet
-            // 
-            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
-            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSet;
-            // 
-            // mahasiswaTableAdapter
-            // 
-            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // nIMDataGridViewTextBoxColumn
             // 
@@ -125,6 +112,20 @@
             this.iDUserDataGridViewTextBoxColumn.Name = "iDUserDataGridViewTextBoxColumn";
             this.iDUserDataGridViewTextBoxColumn.Width = 115;
             // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSet;
+            // 
+            // prodiTIDataSet
+            // 
+            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
+            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
             this.button1.Image = global::EXE.Properties.Resources.left_arrow;
@@ -147,8 +148,8 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
