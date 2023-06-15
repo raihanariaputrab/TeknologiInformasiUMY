@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Teknologi_Informasi_UMY
 {
-    public partial class Form1 : Form
+    public partial class TeknologiInformasiUMY : Form
     {
-        public Form1()
+        public TeknologiInformasiUMY()
         {
             InitializeComponent();
         }
